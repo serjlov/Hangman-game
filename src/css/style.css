@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 700;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-BoldEx.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-Md.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 400;
+    font-style: normal;
+    src: url("/fonts/akzidenz/AkzidenzGroteskPro-Regular.otf")
+      format("opentype");
+  }
+
+  html {
+    font-family: Akzidenz, sistem-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .logo {
+    @apply text-2xl sm:text-4xl md:text-5xl font-bold rounded-md border-x-4 border-black p-10 dark:border-white;
+  }
+
+  .logo-sm {
+    @apply text-xl;
+  }
+  #app {
+    @apply h-screen flex flex-col justify-center items-center dark:text-white dark:bg-zinc-800 overflow-x-hidden overflow-y-auto;
+  }
+  #game {
+    @apply mt-10 flex flex-col items-center;
+  }
+
+  .startBtn {
+    @apply flex justify-center text-black ease-in-out duration-200 text-xl bg-zinc-200 hover:bg-zinc-300 rounded-md font-medium px-20 py-5 dark:bg-indigo-600 dark:hover:bg-indigo-500 dark:text-white;
+  }
+  .letter {
+    @apply mx-2 text-3xl font-medium;
+  }
+
+  .keyboard {
+    @apply max-w-6xl mt-6 mb-6 justify-center flex flex-wrap;
+  }
+  .keyboardBtn {
+    @apply w-10 h-10 sm:w-28 sm:h-14 m-1 sm:m-2 flex justify-center items-center disabled:opacity-20 disabled:cursor-not-allowed text-black ease-in-out duration-200 text-2xl bg-zinc-200 enabled:hover:bg-zinc-300 rounded-md font-medium dark:bg-indigo-600 enabled:dark:hover:bg-indigo-500 dark:text-white;
+  }
+  .placeholders_wrapper {
+    @apply flex flex-row;
+  }
+
+  .tries {
+    @apply mt-6 font-medium text-xl;
+  }
+  .tries-left {
+    @apply font-medium text-red-600 text-xl;
+  }
+  .hangman-img {
+    @apply w-16 h-16 sm:w-48 sm:h-48;
+  }
+  .result-header {
+    @apply text-2xl font-bold mt-4;
+  }
+  .result-header.win {
+    @apply text-lime-600;
+  }
+  .result-header.lose {
+    @apply text-red-600;
+  }
+  .result-word {
+    @apply font-medium uppercase;
+  }
+  .quitBtn {
+    @apply border px-20 py-1 mt-4 font-medium text-xl border-black ease-in-out duration-200 rounded-md hover:bg-zinc-300 dark:border-white dark:hover:bg-zinc-600;
+  }
+}
