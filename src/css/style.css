@@ -57,7 +57,7 @@
     @apply w-10 h-10 sm:w-28 sm:h-14 m-1 sm:m-2 flex justify-center items-center disabled:opacity-20 disabled:cursor-not-allowed text-black ease-in-out duration-200 text-2xl bg-zinc-200 enabled:hover:bg-zinc-300 rounded-md font-medium dark:bg-indigo-600 enabled:dark:hover:bg-indigo-500 dark:text-white;
   }
   .placeholders_wrapper {
-    @apply flex flex-row;
+    @apply flex flex-row mt-6;
   }
 
   .tries {
@@ -67,7 +67,7 @@
     @apply font-medium text-red-600 text-xl;
   }
   .hangman-img {
-    @apply w-16 h-16 sm:w-48 sm:h-48;
+    @apply w-40 h-40 sm:w-48 sm:h-48;
   }
   .result-header {
     @apply text-2xl font-bold mt-4;
